@@ -113,7 +113,7 @@ li a {
  .cta-button { 
   padding: 10px 20px; /* Fix syntax: space between 10 and px removed */
   border: none;
-  position:fixed;
+  position:absolute;
   top: 7.5px; /* Adjust this to match your menu bar's height */
   right: 20px;
   z-index: 1000;
@@ -124,87 +124,9 @@ li a {
 }
 @media (max-width: 768px) {
   .cta-button {
-    padding: 15px 25px; /* Larger padding for better touch targets */
-    font-size: 18px; /* Increase font size for readability */
+      top: 10px;
+      right: 10px;
+      font-size: 14px;
+      padding: 8px 16px;
   }
-}
-
-
-
-.active {
-  background-color: coral;
-}
-
-li a:hover {
-  background-color: coral;
-}
-
-.nav ul li:hover > ul.dropdown {
-  display: block;
-}
-
-.nav ul li {
-  position: relative;
-}
-
-ul.dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #444;
-  min-width: 200px;
-  z-index: 1000;
-}
-
-ul.dropdown li a {
-  display: block;
-  padding: 10px 20px;
-  color: white;
-  text-decoration: none;
-}
-
-ul.dropdown li a:hover {
-  background-color: coral;
-}
-
-.footer {
-  position: absolute;  /* Position the footer at the bottom */
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  transition: transform 0.3s ease-in-out; /* Smooth sliding */
-  transform: translateY(100%);  /* Initially hide the footer */
-}
-.footer-container {
-  max-width: 1200px;
-  margin: auto; /* Center footer content */
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.footer a {
-  color: #fff; /* White links */
-  text-decoration: none; /* No underline */
-  font-size: 16px;
-  margin: 0 10px;
-}
-
-.footer a:hover {
-  color: #ff7350; /* Highlight color on hover */
-}
-
-.footer i {
-  margin-right: 8px; /* Space between icon and text */
-}
-
-
-.footer p{
-  font-size: 30px;
 }
